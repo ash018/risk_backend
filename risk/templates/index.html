@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+ <head>
+ <meta charset="utf-8">
+ <title>RISK</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="VUE & DJANGO">
+ <meta name="keywords" content="vuejs, django, crudapp, restapi">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div id="starting">
+      <div class="container">
+        <div class="row">
+          <h1>List of RISKS
+          <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#addRiskModal">ADD RISK</button>
+          </h1>
+            <div id="app">
+                {{ message }}
+            </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="risk in risks">
+                <th scope="row">${risk.risk_id}</th>
+                <td>${risk.risk_name}</td>
+                <td>
+                  <button class="btn btn-info" v-on:click="getArticle(risk.risk_id)">Edit</button>
+                  <button class="btn btn-danger" v-on:click="deleteArticle(risk.risk_id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
+        <div class="modal fade" id="editRiskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle2">EDIT RISK</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form v-on:submit.prevent="updateRisk()">
+                <div class="modal-body">
+                    <div class="form-group">
+                      <label for="risk_name2">RISK NAME</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="risk_name2"
+                        placeholder="Enter Risk Name"
+                        v-model="currentRisk.risk_name"
+                        required="required" >
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary m-progress" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+                </form>
+              </div>
+            </div>
+
+      <div class="loading" v-if="loading===true">Loading&#8230;</div>
+    </div>
+
+    <div class="modal fade" id="addRiskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">ADD RISK</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form v-on:submit.prevent="addRisk()">
+                <div class="modal-body">
+                    <div class="form-group">
+                      <label for="risk_name">RISK NAME</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="risk_name"
+                        placeholder="Enter RISK NAME"
+                        v-model="newRisk.risk_name"
+                        required="required" >
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+                </form>
+              </div>
+            </div>
+           <div class="loading" v-if="loading===true">Loading&#8230;</div>
+          </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+<script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+var myObject = new Vue({
+    el: '#app',
+    data: {message: 'Hello Vue!'}
+})
+</script>
+
+<script type="text/javascript">
+
+
+ new Vue({
+   el: '#starting',
+   delimiters: ['${','}'],
+   data: {
+   risks: [],
+   loading: false,
+   currentRisk: {},
+   message: null,
+   newRisk: { 'risk_name': null },
+ },
+ mounted: function() {
+    this.getRisks();
+
+},
+ methods: {
+    getRisks: function(){
+        this.loading=true;
+        this.$http.get("http://127.0.0.1:8000/api/risk/")
+            .then((response) => {
+                this.risks = response.data;
+                this.loading = false;
+            })
+
+            .catch((err) => {
+                this.loading = false;
+                console.log(err);
+            })
+    },
+    getRisk: function(){
+        this.loading = true;
+        this.$http.get('/api/risk/${id}/')
+            .then((response) => {
+                this.currentRisk = response.data;
+                $("#editRiskModal").modal('show');
+                this.loading = false;
+            })
+            .catch((err) => {
+                this.loading = false;
+                console.log(err);
+            })
+    },
+    addRisk: function() {
+          this.loading = true;
+          this.axios.post('http://127.0.0.1:8000/api/risk/',this.newRisk)
+              .then((response) => {
+                this.loading = false;
+                this.getRisks();
+              })
+              .catch((err) => {
+                this.loading = false;
+                console.log(err);
+              })
+     },
+    updateRisk: function() {
+          this.loading = true;
+          this.$http.put('/api/risk/${this.currentRisk.risk_id}/',this.currentRisk)
+              .then((response) => {
+                this.loading = false;
+                this.currentRisk = response.data;
+                this.getRisks();
+              })
+              .catch((err) => {
+                this.loading = false;
+                console.log(err);
+              })
+     },
+
+     deleteRisk: function(id) {
+          this.loading = true;
+          this.$http.delete('/api/risk/${id}/' )
+              .then((response) => {
+                this.loading = false;
+                this.getRisks();
+              })
+              .catch((err) => {
+                this.loading = false;
+                console.log(err);
+              })
+     }
+}
+ });
+ </script>
+    </div>
+</body>
+</html>
