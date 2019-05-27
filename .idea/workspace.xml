@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67acd6f1-a806-4c93-8aea-5ba3951cc2a8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk/migrations/0002_fieldtype.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/risk/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/risk/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/risk/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/viewsets.py" afterDir="false" />
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/risk/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="374">
+              <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -40,8 +41,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/risk/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="510">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -52,8 +53,8 @@
       <file leaf-file-name="viewsets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/risk/viewsets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="374">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -61,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myproject/routers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="170">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -113,8 +114,8 @@
       <find>https://cdn.jsdelivr.net/npm/vue-resource@1.3.5</find>
       <find>addRiskModal</find>
       <find>getRisks</find>
-      <find>corsheaders.middleware.CorsMiddleware</find>
       <find>currentRisk</find>
+      <find>corsheaders.middleware.CorsMiddleware</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,10 +128,10 @@
         <option value="$PROJECT_DIR$/myproject/urls.py" />
         <option value="$PROJECT_DIR$/myproject/settings.py" />
         <option value="$PROJECT_DIR$/risk/templates/index.html" />
-        <option value="$PROJECT_DIR$/risk/models.py" />
-        <option value="$PROJECT_DIR$/risk/serializers.py" />
         <option value="$PROJECT_DIR$/risk/viewsets.py" />
         <option value="$PROJECT_DIR$/myproject/routers.py" />
+        <option value="$PROJECT_DIR$/risk/serializers.py" />
+        <option value="$PROJECT_DIR$/risk/models.py" />
       </list>
     </option>
   </component>
@@ -231,6 +232,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/risk/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1996">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="55" />
+          <folding>
+            <element signature="e#3604#3611#1" expanded="true" />
+            <element signature="e#3577#3584#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -248,28 +260,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/risk/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/myproject/routers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1996">
-          <caret line="65" column="55" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="55" />
+        <state relative-caret-position="170">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
-            <element signature="e#3604#3611#1" expanded="true" />
-            <element signature="e#3577#3584#1" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/risk/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/risk/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="510">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -278,21 +282,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/risk/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="374">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myproject/routers.py">
+    <entry file="file://$PROJECT_DIR$/risk/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
         </state>
       </provider>
     </entry>
