@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67acd6f1-a806-4c93-8aea-5ba3951cc2a8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/routers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk/migrations/0002_fieldtype.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk/viewsets.py" afterDir="false" />
-    </list>
+    <list default="true" id="67acd6f1-a806-4c93-8aea-5ba3951cc2a8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
