@@ -19,8 +19,15 @@ class Field(models.Model):
 
 class Post(models.Model):
     post_uid = models.AutoField(primary_key=True)
-    post_id = models.IntegerField()
-    post_form_id = models.ForeignKey(Field,on_delete=models.CASCADE,)
-    post_val = models.CharField(max_length=255)
+    post_id = models.IntegerField(null=True)
+    post_field_id = models.ForeignKey(Field,on_delete=models.CASCADE,null=True)
+    post_value = models.CharField(max_length=255)
+
+
+# class Post(models.Model):
+#     post_uid = models.AutoField(primary_key=True)
+#     post_id = models.IntegerField()
+#     post_form_id = models.ForeignKey(Field,on_delete=models.CASCADE,)
+    #post_val = models.CharField(max_length=255)
 
 

@@ -23,10 +23,14 @@ class CustomFieldSerializer(serializers.ModelSerializer):
         fields = '__all__'
         depth = 1
 
-
 class PostSerializer(serializers.ModelSerializer):
+    field = FieldSerializer(read_only=True)
     class Meta:
-        model=Post
-        fields = ['post_uid','post_val']
+        model = Post
+        fields = '__all__'
 
-    #post_val = serializers.SerializerMethodField('get_post_val')
+class CustomPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['post_id']
+        depth = 2
