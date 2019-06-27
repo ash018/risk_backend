@@ -34,3 +34,9 @@ class CustomPostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ['post_id']
         depth = 2
+
+class AllPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
+        depth = 2

@@ -1,5 +1,5 @@
 from rest_framework import routers
-from risk.viewsets import RiskViewSet,FieldTypeViewSet,FieldViewSet,CustomFieldViewSet,PostViewSet,CustomPostViewSet,MaxIdPostViewSet
+from risk.viewsets import RiskViewSet,FieldTypeViewSet,FieldViewSet,CustomFieldViewSet,PostViewSet,CustomPostViewSet,MaxIdPostViewSet,AllPostViewSet
 
 
 router = routers.DefaultRouter()
@@ -11,3 +11,4 @@ router.register(r'cform',CustomFieldViewSet)
 router.register(r'post',PostViewSet)
 router.register(r'cpost',CustomPostViewSet)
 router.register(r'maxpost',MaxIdPostViewSet)
+router.register(r'allpost',AllPostViewSet)
